@@ -24,11 +24,11 @@ def user_data(raw_input_data):
 
 
 # streamlit page config
-st.set_page_config(page_title='Diabetes Detection using Machine Learning Web App', page_icon=':syringe:', layout='center', initial_sidebar_state='auto')
+st.set_page_config(page_title='Diabetes Detection using Machine Learning')
 
 
 # giving a title
-st.title('Diabetes Prediction Web App')
+st.title('Diabetes Detection using Machine Learning')
 
 # st columns of 3
 col1, col2, col3 = st.columns(3)
