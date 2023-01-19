@@ -24,7 +24,7 @@ def user_data(raw_input_data):
 
 
 # streamlit page config
-st.set_page_config(page_title='Diabetes Prediction Web App', page_icon=':syringe:', layout='wide', initial_sidebar_state='auto')
+st.set_page_config(page_title='Diabetes Detection using Machine Learning Web App', page_icon=':syringe:', layout='center', initial_sidebar_state='auto')
 
 
 # giving a title
