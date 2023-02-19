@@ -22,10 +22,21 @@ X = scaler.fit_transform(X.values)
 y = df['Outcome']
 
 # Train test split data
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, stratify = y, random_state = 1)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, stratify = y, random_state = 42)
 
 classifier  = svm.SVC(kernel = 'linear')
 classifier.fit(X_train, y_train)
+
+# accuracy score on training data
+X_train_prediction = classifier.predict(X_train)
+training_data_accuracy = accuracy_score(X_train_prediction, y_train)
+
+# accuracy score on test data
+X_test_prediction = classifier.predict(X_test)
+test_data_accuracy = accuracy_score(X_test_prediction, y_test)
+
+print('Accuracy score of training data : ', training_data_accuracy)
+print('Accuracy score of test data : ', test_data_accuracy)
 
 joblib.dump(classifier, 'diabetes-prediction-model.pkl')
 

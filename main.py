@@ -15,6 +15,7 @@ def user_data(raw_input_data):
     std_input_data = scaler.fit_transform(reshaped_input_data)
 
     real_prediction = model.predict(std_input_data)
+    
 
     if real_prediction == 1:
         return('person is diabetic')
